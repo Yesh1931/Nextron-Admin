@@ -3,7 +3,7 @@
  * High-fidelity visual dashboards, Canvas plotting engines, and dynamic calculator systems.
  */
 
-import { AppState } from '../app.js';
+import { AppState } from './app.js';
 
 export const render = async () => {
     return `
