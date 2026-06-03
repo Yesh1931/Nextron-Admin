@@ -310,7 +310,7 @@ export const mount = () => {
         const googleLoginBtn = document.getElementById('googleLogin');
         if (googleLoginBtn) {
             googleLoginBtn.addEventListener('click', async () => {
-                const { isFirebaseActive } = await import('../firebase.js');
+                const { isFirebaseActive } = await import('./firebase.js');
                 if (isFirebaseActive) {
                     try {
                         const result = await signInWithPopup(auth, provider);
