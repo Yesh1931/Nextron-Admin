@@ -3,7 +3,7 @@
  * Premium One-Stop Learning Resource for Undergraduate ECE Students
  */
 
-import { STUDY_DATA } from '../study_data.js';
+import { STUDY_DATA } from './study_data.js';
 
 let activeSubjectId = 'mosfets';
 let activeTabName = 'concept';
