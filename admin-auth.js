@@ -3,7 +3,7 @@
  * Uses Firebase Auth and Firestore, falling back to localStorage in mock mode.
  */
 
-import { auth, db, isFirebaseActive } from "../js/firebase-config.js";
+import { auth, db, isFirebaseActive } from "./firebase.js";
 
 // Mock Admins database for local development
 const MOCK_ADMINS = [
