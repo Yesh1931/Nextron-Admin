@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nextron Command Center - Secure administrative panel for educational platform management.">
+    <title>Nextron | Command Center</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- KaTeX Mathematics Rendering CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+
+    <!-- Dashboard Custom Stylesheet -->
+    <link rel="stylesheet" href="./admin.css">
+</head>
+<body class="admin-body">
+
+    <!-- Screen 1: Secure Admin Login -->
+    <div id="admin-login-screen" class="admin-auth-container">
+        <div class="admin-auth-card fade-in">
+            <div class="admin-auth-logo">🛡️</div>
+            <h2>Command Center</h2>
+            <p>Secure Administrative Portal</p>
+            
+            <form id="admin-login-form">
+                <div class="form-group text-right" style="text-align: left;">
+                    <label class="form-label" for="login-email">Identifier (Email)</label>
+                    <input type="email" id="login-email" class="form-input" placeholder="operator@nextron.edu" required autocomplete="email">
+                </div>
+                <div class="form-group text-right" style="text-align: left;">
+                    <label class="form-label" for="login-password">Authorization Key</label>
+                    <input type="password" id="login-password" class="form-input" placeholder="••••••••" required autocomplete="current-password">
+                </div>
+                <button type="submit" class="btn btn-primary w-100 mb-10" style="margin-top: 10px; border: none; padding: 14px;">Decrypt & Access</button>
+            </form>
+            <div id="login-error-msg" class="text-error hidden" style="font-size: 0.85rem; margin-top: 12px; font-weight: 500;"></div>
+        </div>
+    </div>
+
+    <!-- Screen 2: Admin Dashboard Layout (Hidden until logged in) -->
+    <div id="admin-main-layout" class="admin-layout hidden">
+        
+        <!-- Sidebar Navigation Drawer -->
+        <aside class="admin-sidebar">
+            <div class="sidebar-logo">
+                <div class="sidebar-logo-icon">🛡️</div>
+                <span class="sidebar-logo-text">Next<span>ron</span></span>
+            </div>
+            
+            <nav class="sidebar-menu">
+                <a class="sidebar-link active" data-tab="dashboard"><i data-lucide="layout-dashboard"></i> Dashboard</a>
+                <a class="sidebar-link" data-tab="users"><i data-lucide="users"></i> Users</a>
+                <a class="sidebar-link" data-tab="content"><i data-lucide="book-open"></i> Content Manager</a>
+                <a class="sidebar-link" data-tab="quizzes"><i data-lucide="award"></i> Quiz Manager</a>
+                <a class="sidebar-link" data-tab="simulations"><i data-lucide="flask-conical"></i> Simulation Manager</a>
+                <a class="sidebar-link" data-tab="announcements"><i data-lucide="megaphone"></i> Announcements</a>
+                <a class="sidebar-link" data-tab="feedback"><i data-lucide="message-square"></i> Feedback</a>
+                <a class="sidebar-link" data-tab="analytics"><i data-lucide="line-chart"></i> Analytics</a>
+                <a class="sidebar-link" data-tab="settings"><i data-lucide="settings"></i> Settings</a>
+                <a class="sidebar-link" data-tab="logs"><i data-lucide="file-text"></i> Activity Logs</a>
+                
+                <a class="sidebar-link text-error" id="btn-admin-logout"><i data-lucide="log-out"></i> Logout</a>
+            </nav>
+        </aside>
+
+        <!-- Main Workspace Frame -->
+        <div class="admin-workspace">
+            
+            <!-- Global Top Bar -->
+            <header class="admin-header">
+                <div class="header-search-box">
+                    <i data-lucide="search" style="width: 16px; height: 16px; color: var(--text-muted);"></i>
+                    <input type="text" id="global-admin-search" placeholder="Global system lookup (Users, CMS, Quizzes)...">
+                </div>
+                
+                <div class="header-profile-pill">
+                    <div class="profile-avatar" id="admin-avatar-char">A</div>
+                    <span id="admin-profile-email" style="font-size: 0.85rem; font-weight: 600; color: var(--text-primary);">admin@nextron.edu</span>
+                </div>
+            </header>
+
+            <!-- Dynamic Workspace Mounting Point -->
+            <main class="admin-content-mount" id="admin-main-mount">
+                <div class="flex-center" style="height: 60vh;">
+                    <div class="spinner"></div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Modals Host Container -->
+    <div id="admin-modal-host" class="admin-modal-overlay">
+        <div class="admin-modal-content" id="admin-modal-inner">
+            <!-- Injected by scripts -->
+        </div>
+    </div>
+
+    <!-- Toast Notifications Host -->
+    <div id="admin-toast-container"></div>
+
+    <!-- Core App Module Scripts -->
+    <script type="module" src="./admin.js"></script>
+</body>
+</html>

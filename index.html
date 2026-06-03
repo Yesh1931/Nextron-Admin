@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nextron - An interactive, visual, and engaging learning platform for Electronics and Communication Engineering students.">
+    <title>Nextron | Visual Electronics & Signals Simulator</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Manrope:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- KaTeX Mathematics Rendering CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+    
+    <!-- Core Styles -->
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <!-- Real-time particle backdrop -->
+    <canvas id="particle-bg"></canvas>
+    
+    <!-- Floating Navbar Shell -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="#/" class="logo-area">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                    </svg>
+                </div>
+                <span class="logo-text">Next<span>ron</span></span>
+            </a>
+            
+            <button class="mobile-toggle" aria-label="Toggle navigation menu">
+                <i data-lucide="menu"></i>
+            </button>
+            
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li class="restricted-nav"><a href="#/dashboard" class="nav-link" data-route="dashboard"><i data-lucide="layout-dashboard"></i> Dashboard</a></li>
+                    <li class="restricted-nav"><a href="#/concepts" class="nav-link" data-route="concepts"><i data-lucide="cpu"></i> Concepts</a></li>
+                    <li class="restricted-nav"><a href="#/sandbox" class="nav-link" data-route="sandbox"><i data-lucide="flask-conical"></i> Sandbox</a></li>
+                    <li class="restricted-nav"><a href="#/circuit-lab" class="nav-link" data-route="circuit-lab"><i data-lucide="wrench"></i> Circuit Lab</a></li>
+                    <li class="restricted-nav"><a href="#/math-center" class="nav-link" data-route="math-center"><i data-lucide="line-chart"></i> Math Center</a></li>
+                    <li class="restricted-nav"><a href="#/notes" class="nav-link" data-route="notes"><i data-lucide="book-open"></i> Notes Hub</a></li>
+                    <li class="restricted-nav"><a href="#/study-hub" class="nav-link" data-route="study-hub"><i data-lucide="graduation-cap"></i> Study Hub</a></li>
+                    <li class="restricted-nav"><a href="#/quiz" class="nav-link" data-route="quiz"><i data-lucide="award"></i> Quiz Arena</a></li>
+                    <li><a href="#/about" class="nav-link" data-route="about"><i data-lucide="user"></i> About</a></li>
+                    <li id="auth-nav-item"></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <!-- Dynamic user auth pill -->
+                <div id="auth-header-pill"></div>
+                
+                <button id="theme-toggle" class="action-btn theme-btn" aria-label="Toggle light/dark theme">
+                    <i data-lucide="sun" class="sun-icon"></i>
+                    <i data-lucide="moon" class="moon-icon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Dynamic View Mounting Root -->
+    <main id="app-root">
+        <!-- Views will inject content here dynamically -->
+        <div class="app-loader">
+            <div class="spinner"></div>
+            <p>Initializing Circuit Board...</p>
+        </div>
+    </main>
+    
+    <!-- Toast Notifications Container -->
+    <div id="toast-container"></div>
+    
+    <!-- Main JS Application Entrypoint (ES Module) -->
+    <script type="module" src="./js/app.js"></script>
+</body>
+</html>
