@@ -2,7 +2,7 @@
  * Nextron - Visual Circuit Sandbox View
  */
 
-import { AppState } from '../app.js';
+import { AppState } from './app.js';
 
 export const render = async () => {
     return `
