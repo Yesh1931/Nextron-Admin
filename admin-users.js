@@ -2,7 +2,7 @@
  * Nextron - User Management & Student Feedback
  */
 
-import { db, isFirebaseActive } from "./js/firebase-config.js";
+import { db, isFirebaseActive } from "./firebase.js";
 import { logAdminAction } from "./admin-dashboard.js";
 
 // Main render entrypoint
