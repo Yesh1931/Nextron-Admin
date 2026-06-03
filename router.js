@@ -61,7 +61,7 @@ export class Router {
         if (ROUTE_TO_CONCEPT_MAP[routePath]) {
             const conceptId = ROUTE_TO_CONCEPT_MAP[routePath];
             try {
-                const { isSubjectLocked } = await import('./views/concepts.js');
+                const { isSubjectLocked } = await import('./concepts.js');
                 const AppState = window.AppState;
                 
                 if (AppState && isSubjectLocked(conceptId)) {
