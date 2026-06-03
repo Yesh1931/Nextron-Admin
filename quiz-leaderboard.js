@@ -3,8 +3,8 @@
  * Route: #/leaderboard
  */
 
-import { getLeaderboard, loadProfile, getLevelInfo } from '../quiz-engine.js';
-import { AppState } from '../app.js';
+import { getLeaderboard, loadProfile, getLevelInfo } from './quiz-engine.js';
+import { AppState } from './app.js';
 
 export const render = async () => `
     <style>
