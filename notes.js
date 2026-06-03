@@ -11,8 +11,8 @@
  *   5. Searchable Glossary — real-time filtering across all content
  */
 
-import { AppState } from '../app.js';
-import { GLOSSARY } from '../database.js';
+import { AppState } from './app.js';
+import { GLOSSARY } from './database.js';
 
 // ─── NOTES DATA ───────────────────────────────────────────────────────────────
 const NOTES_DATA = [
