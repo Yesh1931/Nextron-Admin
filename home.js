@@ -4,7 +4,7 @@
  * Dynamically delegates rendering and mounting based on user session state.
  */
 
-import { AppState } from '../app.js';
+import { AppState } from './app.js';
 
 export const render = async () => {
     const user = AppState.currentUser;
