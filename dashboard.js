@@ -3,11 +3,11 @@
  * Route: #/dashboard
  */
 
-import { AppState } from '../app.js';
+import { AppState } from './app.js';
 import {
     loadProfile, saveProfile, getLevelInfo, getAnalytics, getWeaknesses,
     DIFFICULTIES, CATEGORIES, ACHIEVEMENT_REGISTRY, getQuizHistory
-} from '../quiz-engine.js';
+} from './quiz-engine.js';
 
 // Module-level timers
 let animTimers = [];
