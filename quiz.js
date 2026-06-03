@@ -3,8 +3,8 @@
  * All 15 phases integrated while preserving original functionality.
  */
 
-import { AppState } from '../app.js';
-import { QUIZ_BANK, EXPERT_QUESTIONS } from '../database.js';
+import { AppState } from './app.js';
+import { QUIZ_BANK, EXPERT_QUESTIONS } from './database.js';
 import {
     loadProfile, saveProfile, getLevelInfo, processQuizCompletion,
     getDailyChallenge, markDailyChallengeComplete,
