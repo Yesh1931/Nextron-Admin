@@ -11,7 +11,7 @@ import {
     DIFFICULTIES, TIMED_MODES, BATTLE_MODES, CATEGORIES, ACHIEVEMENT_REGISTRY,
     xpThresholdForLevel, updateWeaknesses, getWeaknesses,
 } from '../quiz-engine.js';
-import { isFirebaseActive, db } from '../firebase-config.js';
+import { isFirebaseActive, db } from './firebase.js';
 
 // ─── MODULE STATE ─────────────────────────────────────────────────────────────
 let activeQuizKey       = null;
