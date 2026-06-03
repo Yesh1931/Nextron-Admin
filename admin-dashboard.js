@@ -3,7 +3,7 @@
  * Computes statistical summaries and displays recent activity logs.
  */
 
-import { db, isFirebaseActive } from "../js/firebase-config.js";
+import { db, isFirebaseActive } from "./firebase.js";
 
 // Renders the main dashboard overview page
 export async function render(mountPoint, tabName) {
