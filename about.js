@@ -2,7 +2,7 @@
  * Nextron - About Developer View
  */
 
-import { AppState } from '../app.js';
+import { AppState } from './app.js';
 
 export const render = async () => {
     // 1. Gather all registered student accounts
