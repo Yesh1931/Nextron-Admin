@@ -3,7 +3,7 @@
  * Coordinates metrics collection and renders dynamic charts using Chart.js.
  */
 
-import { db, isFirebaseActive } from "../js/firebase-config.js";
+import { db, isFirebaseActive } from ".firebase-config.js";
 import { fetchUsersData } from "./admin-users.js";
 import { fetchQuizzesData } from "./admin-quizzes.js";
 import { fetchSimulationsData } from "./admin-simulations.js";
