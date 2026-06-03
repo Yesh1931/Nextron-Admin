@@ -3,7 +3,7 @@
  * Route: #/ (for non-logged-in guest users)
  */
 
-import { AppState } from '../app.js';
+import { AppState } from './app.js';
 
 // Module-level state and animation variables
 let sigAnim = null;
