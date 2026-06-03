@@ -10,7 +10,7 @@ import {
     getDailyChallenge, markDailyChallengeComplete,
     DIFFICULTIES, TIMED_MODES, BATTLE_MODES, CATEGORIES, ACHIEVEMENT_REGISTRY,
     xpThresholdForLevel, updateWeaknesses, getWeaknesses,
-} from '../quiz-engine.js';
+} from './quiz-engine.js';
 import { isFirebaseActive, db } from './firebase.js';
 
 // ─── MODULE STATE ─────────────────────────────────────────────────────────────
