@@ -3,7 +3,7 @@
  * Manages assessment banks, question definitions, difficulty levels, and exports.
  */
 
-import { db, isFirebaseActive } from "../js/firebase-config.js";
+import { db, isFirebaseActive } from "./firebase.js";
 import { logAdminAction } from "./admin-dashboard.js";
 
 // Main render entrypoint
