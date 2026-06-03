@@ -1,4 +1,4 @@
-import { isFirebaseActive, db } from '../firebase-config.js';
+import { isFirebaseActive, db } from './firebase.js';
 
 let activeCurriculum = null;
 
