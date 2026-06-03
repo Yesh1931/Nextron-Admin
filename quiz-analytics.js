@@ -3,8 +3,8 @@
  * Route: #/quiz-analytics
  */
 
-import { AppState } from '../app.js';
-import { loadProfile, getLevelInfo, getAnalytics, getWeaknesses, CATEGORIES, ACHIEVEMENT_REGISTRY, SUBJECT_RANK_TIERS, xpThresholdForLevel } from '../quiz-engine.js';
+import { AppState } from './app.js';
+import { loadProfile, getLevelInfo, getAnalytics, getWeaknesses, CATEGORIES, ACHIEVEMENT_REGISTRY, SUBJECT_RANK_TIERS, xpThresholdForLevel } from './quiz-engine.js';
 
 export const render = async () => `
     <style>
